@@ -2,12 +2,12 @@
 #include <vector>
 #include <algorithm>
 
-using std::vector;
+using namespace std;
 
 // Function to find the minimum unchangeable amount
 int minUnchangeableAmount(vector<int> coins) {
     // STEP 1: Sort coins in ascending order
-    std::sort(coins.begin(), coins.end());
+    sort(coins.begin(), coins.end());
 
     // STEP 2: Initialize result as 1 (smallest amount we want to check)
     int res = 1;
@@ -29,20 +29,20 @@ int minUnchangeableAmount(vector<int> coins) {
 
 int main() {
     int n;
-    std::cin >> n; // Number of coins
+    cin >> n; // Number of coins
 
     vector<int> coins(n);
 
     // Read input coins
     for (int i = 0; i < n; i++) {
-        std::cin >> coins[i];
+        cin >> coins[i];
     }
 
     // Compute minimum unchangeable amount
     int result = minUnchangeableAmount(coins);
 
     // Print result
-    std::cout << result << std::endl;
+    cout << result << endl;
 
     return 0;
 }
